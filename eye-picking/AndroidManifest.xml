@@ -45,6 +45,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:name="org.gearvrf.eyepickingsample.MainActivity"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask"
+            android:label="Eye-Cube" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:name="org.gearvrf.eyepickingsample.MainActivity2"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask"
+            android:label="Eye-Cube" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        </application>
 
 </manifest>

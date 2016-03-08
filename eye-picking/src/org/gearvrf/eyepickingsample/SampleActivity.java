@@ -16,7 +16,9 @@
 
 package org.gearvrf.eyepickingsample;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 
 import org.gearvrf.GVRActivity;
 
@@ -26,5 +28,10 @@ public class SampleActivity extends GVRActivity {
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setScript(new SampleViewManager(this), "gvr_note4.xml");
+    }
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        startActivity(new Intent(this, MainActivity.class));
+        return true;
     }
 }

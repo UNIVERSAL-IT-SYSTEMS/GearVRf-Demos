@@ -20,6 +20,7 @@ import java.util.List;
 
 import org.gearvrf.*;
 import org.gearvrf.GVRPicker.GVRPickedObject;
+import org.gearvrf.GVRScript.SplashMode;
 import org.gearvrf.utility.Log;
 
 public class SampleViewManager extends GVRScript {
@@ -49,7 +50,7 @@ public class SampleViewManager extends GVRScript {
     public void onInit(GVRContext gvrContext) {
         mGVRContext = gvrContext;
 
-        GVRScene mainScene = mGVRContext.getNextMainScene();
+        GVRScene mainScene = mGVRContext.getMainScene();
 
         mainScene.getMainCameraRig().getLeftCamera()
                 .setBackgroundColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -217,5 +218,10 @@ public class SampleViewManager extends GVRScript {
                 sceneObject.getRenderData().getMesh().getBoundingBox());
         eyePointeeHolder.addPointee(eyePointee);
         sceneObject.attachEyePointeeHolder(eyePointeeHolder);
+    }
+
+    @Override
+    public SplashMode getSplashMode() {
+        return SplashMode.NONE;
     }
 }
